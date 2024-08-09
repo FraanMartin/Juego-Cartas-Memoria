@@ -1,6 +1,6 @@
 # Juego-Cartas-Memoria
 
-## Este proyecto el un juego de memorizar las parejas de cartas contando con varios niveles y guardando el tiempo que se tarda en completar el juego
+## Este proyecto es un juego de memorizar las parejas de cartas contando con varios niveles y guardando el tiempo que se tarda en completar el juego
 
 > [!IMPORTANT]
 > Ventana Principal
