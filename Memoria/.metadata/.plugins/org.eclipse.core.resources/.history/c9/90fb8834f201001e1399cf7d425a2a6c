@@ -1,0 +1,18 @@
+package paquete;
+
+public class Carta {
+	private String imagenArriba;
+	private String imagenAbajo;
+	private boolean haciaArriba;
+	private String valor;
+	
+	public Carta(String imagenArriba,String valor) {
+		this.imagenArriba = imagenArriba;
+		this.valor = valor;
+		
+		
+	}
+	
+	
+
+}

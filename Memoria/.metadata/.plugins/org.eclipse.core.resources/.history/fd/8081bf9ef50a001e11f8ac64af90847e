@@ -1,0 +1,114 @@
+package paquete;
+
+import java.awt.EventQueue;
+import java.awt.FlowLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Toolkit;
+
+public class Vista {
+
+	private JFrame frmJuegoDeMemoria;
+    private Ventana_facil facil;
+    private Ventana_Medio medio;
+    private Ventana_dificil dificil;
+
+
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Vista window = new Vista();
+					window.frmJuegoDeMemoria.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Vista() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frmJuegoDeMemoria = new JFrame();
+		frmJuegoDeMemoria.setIconImage(Toolkit.getDefaultToolkit().getImage(Vista.class.getResource("/imagenes/futbin.png")));
+		frmJuegoDeMemoria.setTitle("Juego de Memoria");
+		frmJuegoDeMemoria.setResizable(false);
+		frmJuegoDeMemoria.setBackground(new Color(120, 120, 120));
+		frmJuegoDeMemoria.getContentPane().setBackground(Color.DARK_GRAY);
+		frmJuegoDeMemoria.setBounds(100, 100, 600, 400);
+		frmJuegoDeMemoria.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmJuegoDeMemoria.getContentPane().setLayout(null);
+		
+		
+		JLabel lblNewLabel = new JLabel("JUEGO DE MEMORIA");
+		lblNewLabel.setForeground(new Color(255, 0, 128));
+		lblNewLabel.setFont(new Font("Wide Latin", Font.BOLD | Font.ITALIC, 16));
+		lblNewLabel.setBounds(124, 29, 411, 46);
+		frmJuegoDeMemoria.getContentPane().add(lblNewLabel);
+		
+		JLabel lblSeleccionaLaDificultad = new JLabel("Selecciona la dificultad");
+		lblSeleccionaLaDificultad.setForeground(Color.MAGENTA);
+		lblSeleccionaLaDificultad.setFont(new Font("MV Boli", Font.BOLD, 16));
+		lblSeleccionaLaDificultad.setBounds(185, 94, 249, 46);
+		frmJuegoDeMemoria.getContentPane().add(lblSeleccionaLaDificultad);
+		
+		JButton boton_facil = new JButton("");
+		boton_facil.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				facil = new Ventana_facil();
+			}
+		});
+		boton_facil.setBackground(Color.DARK_GRAY);
+		boton_facil.setIcon(new ImageIcon(Vista.class.getResource("/imagenes/verde.png")));
+		boton_facil.setBounds(60, 215, 80, 80);
+		boton_facil.setBorder(null);
+		frmJuegoDeMemoria.getContentPane().add(boton_facil);
+		
+		JButton boton_medio = new JButton("");
+		boton_medio.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				medio = new Ventana_Medio();
+			}
+		});
+		boton_medio.setBorder(null);
+		boton_medio.setBackground(Color.DARK_GRAY);
+		boton_medio.setIcon(new ImageIcon(Vista.class.getResource("/imagenes/naranja.png")));
+		boton_medio.setBounds(421, 215, 90, 90);
+		frmJuegoDeMemoria.getContentPane().add(boton_medio);
+		
+		JButton boton_dificil = new JButton("");
+		boton_dificil.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dificil = new Ventana_dificil();
+			}
+		});
+		boton_dificil.setBorder(null);
+		boton_dificil.setBackground(Color.DARK_GRAY);
+		boton_dificil.setIcon(new ImageIcon(Vista.class.getResource("/imagenes/rojo.jpg")));
+		boton_dificil.setBounds(247, 215, 90, 90);
+		frmJuegoDeMemoria.getContentPane().add(boton_dificil);
+		
+		
+	}
+}

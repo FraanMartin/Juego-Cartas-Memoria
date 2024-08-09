@@ -1,0 +1,40 @@
+package paquete;
+
+public class Carta {
+	private String imagenArriba;
+	private String imagenAbajo;
+	private boolean haciaArriba;
+	private String valor;
+	
+	public Carta(String imagenArriba) {
+		//manzana.jpg
+		this.imagenArriba = imagenArriba;		
+		String[] valores = imagenArriba.split(".");
+		this.valor = valores[0];
+	}
+
+	public boolean isHaciaArriba() {
+		return haciaArriba;
+	}
+
+	public void setHaciaArriba(boolean haciaArriba) {
+		this.haciaArriba = haciaArriba;
+	}
+
+	public String getImagenArriba() {
+		return imagenArriba;
+	}
+
+	public String getImagenAbajo() {
+		return imagenAbajo;
+	}
+
+	public String getValor() {
+		return valor;
+	}
+	
+	
+	
+	
+
+}

@@ -1,0 +1,28 @@
+package paquete;
+
+import java.io.File;
+import java.util.Random;
+
+public class Tablero {
+	private Carta[] cartas;
+	private String[] imagenes;
+	
+	public Tablero(String dificultad) {
+		obtenerImagenes();
+		if(dificultad.equals("facil")) {
+			//Construir cartas
+		}
+	}
+	
+	private void generarCartas(int numeroCartas) {
+		Random r = new Random();
+		r.nextInt(numeroCartas);
+	}
+	
+	private void obtenerImagenes() {
+		File carpeta = new File("imagenes");
+		if(carpeta.isDirectory()) {
+			imagenes = carpeta.list();
+		}
+	}
+}

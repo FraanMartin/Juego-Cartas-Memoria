@@ -1,0 +1,32 @@
+package paquete;
+
+import java.awt.EventQueue;
+import java.awt.Toolkit;
+
+import javax.swing.JFrame;
+
+public class Ventana_Medio {
+
+	private JFrame frmModoMedio;
+
+	
+	public Ventana_Medio() {
+		initialize();
+		frmModoMedio.setVisible(true);
+
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frmModoMedio = new JFrame();
+		frmModoMedio.setIconImage(Toolkit.getDefaultToolkit().getImage(Ventana_facil.class.getResource("/imagenes/naranja.png")));
+		frmModoMedio.setTitle("Modo Facil");
+		frmModoMedio.setResizable(false);
+		frmModoMedio.setBounds(300, 300, 600, 400);
+		frmModoMedio.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		frmModoMedio.getContentPane().setLayout(null);
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Redenominar tipo «paquete.Modelo» como «Carta»&#x0D;&#x0A;- Proyecto original: «Memoria»&#x0D;&#x0A;- Elemento original: «paquete.Modelo»&#x0D;&#x0A;- Elemento redenominado: «paquete.Carta»&#x0D;&#x0A;- Actualizar referencias a elemento refactorizado&#x0D;&#x0A;- Actualizar apariciones textuales en comentarios y cadenas de texto" description="Redenominar tipo «Modelo»" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;paquete{Modelo.java[Modelo" matchStrategy="1" name="Carta" qualified="false" references="true" similarDeclarations="false" stamp="1685784054626" textual="false" version="1.0"/>
+</session>
